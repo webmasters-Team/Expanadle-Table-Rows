@@ -1,0 +1,451 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasters small projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=latin-ext">
+<body>
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+  <div class="page-container">
+    <h1>CSS Table Example with Dropdown Information</h1>
+
+    <div role="table" aria-label="Responsive CSS3 Flexbox Tables">
+
+      <!--
+				________________________________________________________________________
+				DESCRIPTION/ COLUMN FILTERING 
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+      <input id="col-1" class="column" name="#" type="checkbox" />
+      <input id="col-2" class="column" name="#" type="checkbox" />
+      <input id="col-3" class="column" name="#" type="checkbox" />
+      <input id="col-4" class="column" name="#" type="checkbox" />
+      <input id="col-5" class="column" name="#" type="checkbox" />
+      <input id="col-6" class="column" name="#" type="checkbox" />
+      <input id="col-7" class="column" name="#" type="checkbox" />
+      <input id="col-8" class="column" name="#" type="checkbox" />
+      <input id="col-9" class="column" name="#" type="checkbox" />
+      <input id="col-10" class="column" name="#" type="checkbox" />
+      <input id="col-11" class="column" name="#" type="checkbox" />
+      <input id="col-12" class="column" name="#" type="checkbox" />
+      <input id="col-13" class="column" name="#" type="checkbox" />
+      <input id="col-14" class="column" name="#" type="checkbox" />
+      <input id="col-15" class="column" name="#" type="checkbox" />
+      <input id="col-16" class="column" name="#" type="checkbox" />
+
+      <input id="filter-column" name="#" type="checkbox" />
+      <input id="wrap-text" name="#" type="checkbox" checked="checked" />
+      <!-- Text wrapping is enabled -->
+      <div class="table-desc">
+        <span>Click on the down arrow to expand a record</span>
+        <div class="filter-panel">
+          <label for="filter-column">Filter</label>
+          <!--<label for="wrap-text">View</label>-->
+          <ul>
+            <li><label for="col-1">ID</label></li>
+            <li><label for="col-2">Name</label></li>
+            <li><label for="col-3">Address</label></li>
+            <li><label for="col-4">Birthday</label></li>
+            <li><label for="col-5">Occupation</label></li>
+            <li><label for="col-6">SSN</label></li>
+            <li><label for="col-7">Username</label></li>
+            <li><label for="col-8">Password</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--
+				________________________________________________________________________
+				TABLE HEADER
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+      <div role="row-group">
+        <div role="row">
+          <span role="column-header" class="narrow">ID</span>
+          <span role="column-header">Name</span>
+          <span role="column-header" class="wide">Address</span>
+          <span role="column-header">Birthday</span>
+          <span role="column-header">Occupation</span>
+          <span role="column-header">SSN</span>
+          <span role="column-header">Username</span>
+          <span role="column-header">Password</span>
+        </div>
+      </div>
+
+      <!--
+				________________________________________________________________________
+				TABLE BODY
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+      <div role="row-group" class="accordion">
+
+        <!--
+					________________________________________________________________________
+					ROW 1
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-1" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">Salt Lake City / United States<label for="row-1"></label></span>
+        </div>
+
+        <!--
+					________________________________________________________________________
+					ROW 2
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-2" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">New York / United States<label for="row-2"></label></span>
+        </div>
+
+        <!--
+					________________________________________________________________________
+					ROW 3
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-3" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">San Diego / United States<label for="row-3"></label></span>
+        </div>
+
+        <!--
+					________________________________________________________________________
+					ROW 4
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-4" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">Sonthofen / Germany<label for="row-4"></label></span>
+        </div>
+
+        <!--
+					________________________________________________________________________
+					ROW 5
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-5" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">Spiesen-Elversberg / Germany<label for="row-5"></label></span>
+        </div>
+
+        <!--
+					________________________________________________________________________
+					ROW 6
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+        <div role="row">
+
+          <!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+          <input id="row-6" name="#" type="checkbox" />
+          <div class="expandable">
+            <div role="row-group">
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17257</a></span>
+                <span role="cell" data-header="Name">Natalie L. Averill</span>
+                <span role="cell" data-header="Address" class="wide">3312 Ruckman Road,<br/>Oklahoma City, OK 73102</span>
+                <span role="cell" data-header="Birthday">May 16, 1994</span>
+                <span role="cell" data-header="Occupation">Arc cutter</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Theand</span>
+                <span role="cell" data-header="Password">Aereop1ah</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17258</a></span>
+                <span role="cell" data-header="Name">Hubert J. Elliot</span>
+                <span role="cell" data-header="Address" class="wide">1114 Walnut Drive,<br/>Langdon, ND 58249</span>
+                <span role="cell" data-header="Birthday">November 5, 1972</span>
+                <span role="cell" data-header="Occupation">Cinematographer</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Crial1972</span>
+                <span role="cell" data-header="Password">RoophaN6osh</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17259</a></span>
+                <span role="cell" data-header="Name">Kevin S. Thurston</span>
+                <span role="cell" data-header="Address" class="wide">3093 Cliffside Drive,<br/>Binghamton, NY 13901</span>
+                <span role="cell" data-header="Birthday">August 9, 1980</span>
+                <span role="cell" data-header="Occupation">Social science research assistant</span>
+                <span role="cell" data-header="SSN">502-31-XXXX</span>
+                <span role="cell" data-header="Username">Wittind1980</span>
+                <span role="cell" data-header="Password">peichee0Pai</span>
+              </div>
+              <div role="row">
+                <span role="cell" data-header="ID" class="narrow"><a href="#">17260</a></span>
+                <span role="cell" data-header="Name">Emilee S. Moore</span>
+                <span role="cell" data-header="Address" class="wide">4249 Sunny Glen Lane,<br/>Cleveland, OH 44115</span>
+                <span role="cell" data-header="Birthday">September 13, 1999</span>
+                <span role="cell" data-header="Occupation">Relay technician</span>
+                <span role="cell" data-header="SSN">287-66-XXXX</span>
+                <span role="cell" data-header="Username">Thwifer</span>
+                <span role="cell" data-header="Password">iqu6au7Ae</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW CELLS -->
+          <span role="cell" class="accordion">Spiesen-Elversberg / Germany<label for="row-6"></label></span>
+        </div>
+
+      </div>
+    </div>
+    <!-- TABLE END -->
+
+  </div>
+</body>
+
+</html>
+<script src="script.js"></script>    
+</body>
+</html>s
